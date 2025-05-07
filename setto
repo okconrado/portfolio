@@ -15,6 +15,8 @@
       background-color: #f9fafb;
       color: #1f2937;
       line-height: 1.6;
+      display: inline-flexbox; grid-template-rows: 1fr; gap: 10px;
+
     }
 
     header {
@@ -82,12 +84,18 @@
       padding: 2rem 8rem;
       text-align: center;
       font-size: 16px;
-      inline-size: 85%;
+      inline-size: 100%;
+
     }
     .hero h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
+
+    .hero h2 {
+      inline-size: 100%;
+    }
+
     .hero p {
       font-size: 1.125rem;
       margin-bottom: 2rem;
@@ -136,6 +144,8 @@
       text-align: top;
       margin-top: 2rem;
       margin-bottom: 2rem;
+      width: 50%;
+      flex: auto;
 
       
     }
@@ -145,8 +155,12 @@
       border-radius: 12px;
       box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
       width: 100%;  
-      display: fixed;
+      display: flexbox;
       align-items: center;
+      height: auto;
+      overflow: auto;
+
+
 
     }
 
@@ -272,8 +286,7 @@
       padding: 20px;
       border-radius: 12px;
       max-width: 200px;
-      height: 350px;
-      
+      height: 350px;      
     }
 
     .post-info-grid:hover {
@@ -288,26 +301,29 @@
       border-radius: 12px;
       padding: 1rem;
       display: flex;
-      column-gap: 15px;
-      row-gap: 20px;
+      display: flex; grid-template-rows: 1fr 1fr 1fr; gap: 10px;
+
     }
 
     .thumbnail-row {
-      display: flex;
-      justify-content: space-evenly;
+      display:grid;
+      justify-content: space-between;
       align-items: center;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      grid: flex;
-      margin-top: 30px;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr, 1fr));
+      scrollbar-width: 0;
+
     }
 
     .interviews {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr 1fr));
       justify-content: center;
       gap: 20px;
       background-color: white;
       color: rgb(0, 0, 0);  
+        display: -webkit-flex;
+        height: 500px;
+        width: 100%;
+        overflow: auto;
     }
 
 
@@ -382,15 +398,17 @@ padding-top: 10px;
       </form>
     </section>
 
-    <section id="how">
+    <section id="how" class="hero h2">
       <h2>Let us begin</h2>
       <div style="background-color: 
     rgb(12, 101, 255);
-    color: white; border-radius: 8px;">Tell us, what stage of your career are you currently in? </div>
+    color: white; border-radius: 8px; align-items: center; display: block; gap: 10px; inline-size: 50%;">
+    Tell us, what stage of your career are you currently in? </div>
 
       <div class="icons">
 
         <form>
+
         <div>
           <h3>HIGH SCHOOL</h3>
           <p>This is for individuals who are in Grade 12, CEGEP 12, or equivalent, or recently graduated.</p>
@@ -416,6 +434,7 @@ padding-top: 10px;
           <label for="option3">
             <input type="checkbox" id="option3" name="options" value="option3">
           </label><br>
+          </div>
 
           </form>
 
@@ -544,6 +563,159 @@ padding-top: 10px;
             </div>
           </div>
 
+          <div class="post-info-grid">         
+            <div class="channel-image"> 
+              <img class="profile-picture" src="setto/images/channel-4.jpeg">
+            </div>
+            <div class="video-info"> 
+              <p class="video-title">
+                From Chef to Supply Chain Analyst
+                </p>
+                <p class="video-author">
+                <b>Simon Kau</b>
+                </p> 
+                <p class="video-summary">
+                  At 23, he started taking an online courses while being a chef in training, and 1 year later he landed a fulfilling role. 
+               </p> 
+            </div>
+          </div>
+
+          <div class="post-info-grid">         
+            <div class="channel-image"> 
+              <img class="profile-picture" src="setto/images/channel-4.jpeg">
+            </div>
+            <div class="video-info"> 
+              <p class="video-title">
+                From Chef to Supply Chain Analyst
+                </p>
+                <p class="video-author">
+                <b>Simon Kau</b>
+                </p> 
+                <p class="video-summary">
+                  At 23, he started taking an online courses while being a chef in training, and 1 year later he landed a fulfilling role. 
+               </p> 
+            </div>
+          </div>
+
+          <div class="post-info-grid">         
+            <div class="channel-image"> 
+              <img class="profile-picture" src="setto/images/channel-4.jpeg">
+            </div>
+            <div class="video-info"> 
+              <p class="video-title">
+                From Chef to Supply Chain Analyst
+                </p>
+                <p class="video-author">
+                <b>Simon Kau</b>
+                </p> 
+                <p class="video-summary">
+                  At 23, he started taking an online courses while being a chef in training, and 1 year later he landed a fulfilling role. 
+               </p> 
+            </div>
+          </div>
+
+          <div class="post-info-grid">         
+            <div class="channel-image"> 
+              <img class="profile-picture" src="setto/images/channel-4.jpeg">
+            </div>
+            <div class="video-info"> 
+              <p class="video-title">
+                From Chef to Supply Chain Analyst
+                </p>
+                <p class="video-author">
+                <b>Simon Kau</b>
+                </p> 
+                <p class="video-summary">
+                  At 23, he started taking an online courses while being a chef in training, and 1 year later he landed a fulfilling role. 
+               </p> 
+            </div>
+          </div>
+
+          <div class="post-info-grid">         
+            <div class="channel-image"> 
+              <img class="profile-picture" src="setto/images/channel-4.jpeg">
+            </div>
+            <div class="video-info"> 
+              <p class="video-title">
+                From Chef to Supply Chain Analyst
+                </p>
+                <p class="video-author">
+                <b>Simon Kau</b>
+                </p> 
+                <p class="video-summary">
+                  At 23, he started taking an online courses while being a chef in training, and 1 year later he landed a fulfilling role. 
+               </p> 
+            </div>
+          </div>
+
+          <div class="post-info-grid">         
+            <div class="channel-image"> 
+              <img class="profile-picture" src="setto/images/channel-4.jpeg">
+            </div>
+            <div class="video-info"> 
+              <p class="video-title">
+                From Chef to Supply Chain Analyst
+                </p>
+                <p class="video-author">
+                <b>Simon Kau</b>
+                </p> 
+                <p class="video-summary">
+                  At 23, he started taking an online courses while being a chef in training, and 1 year later he landed a fulfilling role. 
+               </p> 
+            </div>
+          </div>
+
+          <div class="post-info-grid">         
+            <div class="channel-image"> 
+              <img class="profile-picture" src="setto/images/channel-4.jpeg">
+            </div>
+            <div class="video-info"> 
+              <p class="video-title">
+                From Chef to Supply Chain Analyst
+                </p>
+                <p class="video-author">
+                <b>Simon Kau</b>
+                </p> 
+                <p class="video-summary">
+                  At 23, he started taking an online courses while being a chef in training, and 1 year later he landed a fulfilling role. 
+               </p> 
+            </div>
+          </div>
+
+          <div class="post-info-grid">         
+            <div class="channel-image"> 
+              <img class="profile-picture" src="setto/images/channel-4.jpeg">
+            </div>
+            <div class="video-info"> 
+              <p class="video-title">
+                From Chef to Supply Chain Analyst
+                </p>
+                <p class="video-author">
+                <b>Simon Kau</b>
+                </p> 
+                <p class="video-summary">
+                  At 23, he started taking an online courses while being a chef in training, and 1 year later he landed a fulfilling role. 
+               </p> 
+            </div>
+          </div>
+
+          <div class="post-info-grid">         
+            <div class="channel-image"> 
+              <img class="profile-picture" src="setto/images/channel-4.jpeg">
+            </div>
+            <div class="video-info"> 
+              <p class="video-title">
+                From Chef to Supply Chain Analyst
+                </p>
+                <p class="video-author">
+                <b>Simon Kau</b>
+                </p> 
+                <p class="video-summary">
+                  At 23, he started taking an online courses while being a chef in training, and 1 year later he landed a fulfilling role. 
+               </p> 
+            </div>
+          </div>
+
         </div>
  
      </section>
@@ -566,4 +738,3 @@ padding-top: 10px;
   </footer>
 </body>
 </html>
-
