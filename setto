@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Job Alert Newsletter</title>
+  <title>Setto - The Job App</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">  
+  <style>
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Instrument serif', sans-serif;
@@ -14,6 +16,7 @@
       color: #1f2937;
       line-height: 1.6;
     }
+
     header {
       display: flex;
       justify-content: space-between;
@@ -24,19 +27,62 @@
       top: 0;
       box-shadow: 0 1px 4px rgba(0,0,0,0.05);
       z-index: 1000;
+      border-radius: 8px;
     }
+
+
     header nav a {
       margin-left: 1.5rem;
       text-decoration: none;
       color: #374151;
       font-weight: 500;
     }
+
+    .button {
+      background-color: #0565ff;
+      color: rgb(255, 255, 255);
+      height: 25px;
+      width: 100%;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 400;  
+    }
+
+    .button:hover {
+      background-color: #3b82f6;
+    }
+    .button:active {
+      background-color: #1d4ed8;
+    }
+
+    .button-submit {
+      background-color: #0565ff;
+      color: rgb(255, 255, 255);
+      height: 25px;
+      width: 40%;
+      border-radius: 8px;
+      font-size: 400; 
+      font-family: Instrument serif, sans-serif;
+      font-size: 16px; 
+      border-style: none;
+      margin-top: 15px;
+    }
+
+    .button:hover {
+      background-color: #3b82f6;
+    }
+    .button:active {
+      background-color: #1d4ed8;
+    }
+
     .hero {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 4rem 2rem;
+      padding: 2rem 8rem;
       text-align: center;
+      font-size: 16px;
+      inline-size: 85%;
     }
     .hero h1 {
       font-size: 2.5rem;
@@ -48,7 +94,7 @@
       color: #4b5563;
     }
     .form {
-      display: flex;
+      display: inline-flex;
       flex-direction: column;
       align-items: center;
       gap: 1rem;
@@ -77,34 +123,224 @@
     section {
       padding: 4rem 2rem;
       text-align: center;
+      justify-content: center;
+      margin-left: 50px;
+      
+
     }
     .icons {
-      display: flex;
+      display: inline-block;
       flex-direction: column;
       gap: 2rem;
+      align-items: center;
+      text-align: top;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+
+      
     }
     .icons div {
       background: white;
       padding: 1.5rem;
       border-radius: 12px;
       box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+      width: 100%;  
+      display: fixed;
+      align-items: center;
+
     }
-    .benefits, .testimonials {
+
+    .icons div:hover {
+      opacity: 1;
+      zoom: 120%;
+    }
+
+    .benefits, .stories {
       max-width: 800px;
       margin: 0 auto;
     }
-    .testimonials blockquote {
+    
+    .search-icon {
+  flex: 1;
+  height: 36px;
+  width: 100%;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  background-color: #f5f5f5;
+  font-size: 16px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: 240, 240, 240;
+  border-radius: 1px;
+}
+
+.search-bar {
+  height: 30px;
+  width: 50%;
+  background-color: 245, 245, 245;
+  color: gray;
+  border-color: 192, 192, 192;
+  align-items: center;  
+  justify-content: center;
+  padding-left: 5px;
+  margin-top: 5px;
+}
+
+.search-bar::placeholder {
+  outline: none;
+  font-family: Instrument serif, sans-serif;
+  font-size: 16px;
+  
+}
+
+
+
+
+
+
+    .final-step {
+      padding: 1rem;
+      border-radius: 12px;
+      margin: 1rem auto;
+      width: 100%;
+      max-width: 800px;
+      align-items: center;
+      background-color: #e5e7eb;
+      background: white;
+
+    }
+
+    .stories blockquote {
       font-style: italic;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       border-left: 4px solid #3b82f6;
       padding-left: 1rem;
+      grid: flex;
+      background-color: white;
+      color: blue;
     }
+
+
+    .profile-picture {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      padding-top: 10px;
+      background-color: #e5e7eb;
+
+    }
+
+    .video-info {
+      display: block;
+      width: 200px;
+      height: 200px;
+      align-items: center;
+
+    }
+
+    .video-title {
+        font-family: instrument serif, sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 5px;
+        display: flex;
+        padding: 20px;
+      }
+
+
+    .video-author {
+      font-size: 12px;
+      margin-top: 0;
+      margin-bottom: 4px;
+}
+    .video-summary {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      padding: 20px;
+    }
+
+    .post-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      justify-content: center;
+      grid: flex;
+      background-color: blue;
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 200px;
+      height: 350px;
+      
+    }
+
+    .post-info-grid:hover {
+      opacity: 0.5;
+      zoom: 120%;
+    }
+  
+
+
+    .post-preview {
+      background-color: white;
+      border-radius: 12px;
+      padding: 1rem;
+      display: flex;
+      column-gap: 15px;
+      row-gap: 20px;
+    }
+
+    .thumbnail-row {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid: flex;
+      margin-top: 30px;
+    }
+
+    .interviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr 1fr));
+      justify-content: center;
+      gap: 20px;
+      background-color: white;
+      color: rgb(0, 0, 0);  
+    }
+
+
+    .sidebar {
+      background-color: blue;
+      color: rgb(255, 255, 255);
+      bottom: 0;
+      top: 80px;
+      flex-direction: column;
+      display: flex;
+      border-radius: 8px;
+      padding-top: 40px;
+      padding: 40px;
+      align-items: center;
+      width: 72px;
+      position: fixed;
+      letter-spacing: 0.5px;
+      word-spacing: -3px;
+      left: 10px;
+      height: 400px;
+      
+    }
+
     footer {
       background: #1f2937;
       color: #d1d5db;
-      padding: 2rem;
+      padding: 1rem;
       text-align: center;
       font-size: 0.875rem;
+      padding-bottom: 10px;
+      border-radius: 8px;
+      
+
     }
 
     @media(min-width: 768px) {
@@ -119,73 +355,215 @@
     }
   </style>
 </head>
-<body>
+<body style="
+padding-left: 80px;
+padding-right: 40px;
+padding-top: 10px;
+">
   <header>
-    <div><strong>JobAlert</strong></div>
+    <div><strong>Setto - The Job Site</strong>
+    </div>
+
     <nav>
       <a href="#how">How It Works</a>
-      <a href="#benefits">Benefits</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#subscribe">Subscribe</a>
+      <a href="#stories">Stories</a>
+      <a href="#search-jobs">Subscribe</a>
     </nav>
+
   </header>
 
   <main>
     <section class="hero">
-      <h1>Land Your Next Job—One Email at a Time.</h1>
-      <p>Get curated job listings, tips, and resources straight to your inbox—free and personalized.</p>
+      <h1>Unlike other job search sites, Setto finds the job with you - step by step.</h1>
+      <p>Get curated job listings, tips, and community resources straight to your inbox - free and personalized.</p>
       <form class="form" id="subscribe">
         <input type="email" placeholder="Your Email Address" required />
-        <button type="submit">Get Job Alerts →</button>
+        <button type="submit">Search jobs →</button>
       </form>
     </section>
 
     <section id="how">
-      <h2>How It Works</h2>
+      <h2>Let us begin</h2>
+      <div style="background-color: 
+    rgb(12, 101, 255);
+    color: white; border-radius: 8px;">Tell us, what stage of your career are you currently in? </div>
+
       <div class="icons">
+
+        <form>
         <div>
-          <h3>📝 Sign Up</h3>
-          <p>Enter your email and set your job preferences.</p>
+          <h3>HIGH SCHOOL</h3>
+          <p>This is for individuals who are in Grade 12, CEGEP 12, or equivalent, or recently graduated.</p>
+           <label for="option1">
+            <input type="checkbox" id="option1" name="options" value="option1">
+          </label><br>
         </div>
+        
+
+
         <div>
-          <h3>📬 Get Emails</h3>
-          <p>Receive curated job listings every week.</p>
-        </div>
-        <div>
-          <h3>💼 Apply Confidently</h3>
-          <p>Use our insider tips and guides to stand out.</p>
+          <h3>COLLEGE/UNIVERSITY</h3>
+          <p>This is for individuals who are in post-secondary school or recently graduated.</p>
+          
+          <label for="option2">
+            <input type="checkbox" id="option2" name="options" value="option2">
+          </label><br>
+          </div>
+        
+          <div>
+          <h3>EX-EMPLOYEE</h3>
+          <p>This is for individuals who are have been in the workforce for at least 2-3 years , or switching to new careers - regardless of age. </p>
+          <label for="option3">
+            <input type="checkbox" id="option3" name="options" value="option3">
+          </label><br>
+
+          </form>
+
         </div>
       </div>
+  
+    <div>
+    <section id="final-step" class="final-step">
+        <div>
+          <h3>AREA OF INTEREST</h3>
+          <p>Select your field from the list below</p>
+               <search> <input type="text" placeholder="Search" class="search-bar">  </search> 
+               <details>
+                <summary>Select</summary>
+                
+                <form>
+                  <fieldset>
+                    <legend>
+                      Industry 
+                    </legend>
+                    <ul style="list-style: none; padding: 10px;">
+                      <li>
+                        <label for="finance">Finance</label>
+                        <input type="checkbox" id="finance" name="finance" value="finance" />
+                      </li>
+                      <li>
+                        <label for="human-resources">Human Resources</label>
+                        <input type="checkbox" id="human-resources" name="human-resources" value="human-resources" />
+                      </li>
+                      <li>
+                        <label for="sales">Sales</label>
+                        <input type="checkbox" id="sales" name="sales" value="sales" />
+                      </li>
+                      <li>
+                        <label for="marketing">Marketing</label>
+                        <input type="checkbox" id="marketing" name="marketing" value="marketing" />
+                      </li>
+                    </ul>
+                  </fieldset>
+                </form>
+              
+              </details>
+          <button class="button-submit">Submit</button>
+        </div>
+      </div>
+      </div>
     </section>
+  </section>
 
-    <section id="benefits" class="benefits">
-      <h2>Why Subscribe?</h2>
-      <ul>
-        <li>🎯 Jobs matched to your interests</li>
-        <li>⏰ Save time on job hunting</li>
-        <li>💬 Application tips from hiring pros</li>
-        <li>💡 Early access to hidden opportunities</li>
-      </ul>
-    </section>
 
-    <section id="testimonials" class="testimonials">
-      <h2>Success Stories</h2>
-      <blockquote>“I found my dream job in 3 weeks—this newsletter made it effortless.” — Sarah L., Toronto</blockquote>
-      <blockquote>“I never realized how many remote jobs I was missing out on.” — Mark T., Developer</blockquote>
+    <div>
+    <section id="stories" class="stories">
+      <h2>Candid career stories from rookies and vets</h2>
+      
+      <p style="
+      font-size: 12px;
+      padding: 10px;
+      ">Pitch us your story at jobs@setto.com (a 150-word pitch will do) </p>
+      <blockquote style="padding: 10px;">“I found my dream job in 3 weeks—this newsletter made it effortless.” — Sarah L., Toronto </blockquote>
     </section>
+  </div>
+
+    
+
+      <div class="sidebar"> Watch our product video </div>
+
+      <div>
+        
+        <section id="interviews" class="interviews">
+
+
+        <div class="post-preview"> 
+          
+          <div class="post-info-grid"> 
+          
+            <div class="channel-image"> 
+              <img class="profile-picture" src="Users/user/Desktop/HTML-CSS-Code/setto/images/channel-4.jpeg"/>
+            </div>
+            <div class="video-info"> 
+              <p class="video-title">
+                From recruitment to Software Engineer
+                </p>
+                <p class="video-author">
+                <b>Cameron Blackwood</b>
+                </p> 
+                <p class="video-summary">
+                He's a self-taught developer and he joined us for an interview to share all his best tips for learning to code.
+            </div>
+         </div>
+
+
+         <div class="post-info-grid"> 
+          
+          <div class="channel-image"> 
+            <img class="profile-picture" src="setto/images/channel-4.jpeg">
+          </div>
+          <div class="video-info"> 
+            <p class="video-title">
+              From banking to being a Tech Founder
+              </p>
+              <p class="video-author">
+              <b>Halimah Omogiafo</b>
+              </p> 
+              <p class="video-summary">
+              She launched the version of my app Koody after taking a number of coding courses. 
+             </p> 
+          </div>
+       </div>
+
+       
+          
+          <div class="post-info-grid">         
+            <div class="channel-image"> 
+              <img class="profile-picture" src="setto/images/channel-4.jpeg">
+            </div>
+            <div class="video-info"> 
+              <p class="video-title">
+                From Chef to Supply Chain Analyst
+                </p>
+                <p class="video-author">
+                <b>Simon Kau</b>
+                </p> 
+                <p class="video-summary">
+                  At 23, he started taking an online courses while being a chef in training, and 1 year later he landed a fulfilling role. 
+               </p> 
+            </div>
+          </div>
+
+        </div>
+ 
+     </section>
+    </div>
+  
 
     <section>
+      <div id="search-jobs" class="search-jobs">
       <h2>Ready to Get Hired?</h2>
       <form class="form">
         <input type="email" placeholder="Your Email Address" required />
-        <button type="submit">Get Job Alerts →</button>
+        <button type="submit">Search jobs →</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 JobAlert. All rights reserved.</p>
+    <p>&copy; 2025 Setto. All rights reserved.</p>
     <p><a href="#" style="color: #93c5fd; text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: #93c5fd; text-decoration: none;">Contact Us</a></p>
   </footer>
 </body>
 </html>
+
